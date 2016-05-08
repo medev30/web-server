@@ -13,6 +13,12 @@ app.get('/about', middleware.requireAuth, function(req, res) {
 
 app.use(express.static(__dirname + '/public'));  // will use default index.thml in 'public' folder
 
-app.listen(PORT, function () {
-    console.log('Express server started on port ' + PORT );
-});
+// app.listen(PORT, function () {
+//     console.log('Express server started on port ' + PORT );
+// });
+
+
+var buf = new Buffer ("hello", "utf8");
+
+console.log(buf);
+console.log(buf.toString());
